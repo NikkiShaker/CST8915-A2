@@ -1,5 +1,7 @@
 A2 Assignment
 
+![image](https://github.com/user-attachments/assets/da8bc574-5021-4ae4-bc85-bd9caf4f6a49)
+
 
 The application is a microservices-based system designed for a pet store, supporting both customer-facing and internal operations. Customers interact with the Store Front to browse products and place orders, which are handled by the Order Service and queued in Azure Service Bus for asynchronous processing. The Makeline Service retrieves and processes orders from the queue, updating the MongoDB order database. Employees use the Store Admin interface to manage inventory and track orders via the Product Service and Makeline Service. The Product Service also integrates with the AI Service to generate product descriptions and images using Azure OpenAI services (GPT-4 and DALL-E). The architecture ensures modularity, scalability, and efficient communication, with Azure Service Bus replacing RabbitMQ for message queuing, while MongoDB provides persistent order storage. This design allows seamless coordination between frontend interfaces, backend services, and AI-powered functionalities.
 
