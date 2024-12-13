@@ -3,8 +3,7 @@
        
        
        
-
-              | **Service**         | **Repository Link**                       |
+       | **Service**         | **Repository Link**                       |
        |---------------------|-------------------------------------------|
        | Store-Front         | `<GitHub Link>`                           |
        | Order-Service       | `<GitHub Link>`                           |
@@ -16,7 +15,7 @@
 
        
 
-              | **Service**         | **Docker Image Link**                       |
+       | **Service**         | **Docker Image Link**                     |
        |---------------------|-------------------------------------------|
        | Store-Front         | `<GitHub Link>`                           |
        | Order-Service       | `<GitHub Link>`                           |
