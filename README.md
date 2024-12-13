@@ -63,19 +63,16 @@ Access the application via the EXTERNAL-IP for store-front and store-admin.
               - kubectl logs <pod-name>
        - Describe pods:
               - kubectl describe pod <pod-name>
-
-       
-  
        
        
        | **Service**         | **Repository Link**                       |
        |---------------------|-------------------------------------------|
-       | Store-Front         | `<GitHub Link>`                           |
-       | Order-Service       | `<GitHub Link>`                           |
-       | Store-Admin         | `<GitHub Link>`                           |
-       | Product-Service     | `<GitHub Link>`                           |
-       | AI-Service          | `<GitHub Link>`                           |
-       | Makeline-Service    | `<GitHub Link>`                           |
+       | Store-Front         | `https://github.com/NikkiShaker/store-front-A2`                           |
+       | Order-Service       | `https://github.com/NikkiShaker/order-service-A2`                           |
+       | Store-Admin         | `https://github.com/NikkiShaker/store-admin-A2`                           |
+       | Product-Service     | `https://github.com/NikkiShaker/product-service-A2`                           |
+       | AI-Service          | `https://github.com/NikkiShaker/ai-service-A2`                           |
+       | Makeline-Service    | `https://github.com/NikkiShaker/makeline-service-A2`                           |
 
 
        
