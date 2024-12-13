@@ -85,3 +85,6 @@ Access the application via the EXTERNAL-IP for store-front and store-admin.
        | Product-Service     | `https://hub.docker.com/repository/docker/nikkishaker/product-service-a2/general`                           |
        | AI-Service          | `https://hub.docker.com/repository/docker/nikkishaker/ai-service-a2/general`                           |
        | Makeline-Service    | `https://hub.docker.com/repository/docker/nikkishaker/makeline-service-a2/general`                           |
+
+
+Link to demo video: https://youtu.be/mLzUEONSIXA
