@@ -87,9 +87,6 @@ Access the application via the EXTERNAL-IP for store-front and store-admin.
        | AI-Service          | `https://hub.docker.com/repository/docker/nikkishaker/ai-service-a2/general`                           |
        | Makeline-Service    | `https://hub.docker.com/repository/docker/nikkishaker/makeline-service-a2/general`                           |
 
-
-Link to demo video: https://youtu.be/mLzUEONSIXA
-
 I was able to create a CI/CD pipeline for all of the microservices except product-service. Here's a screenshot of the error:
 
 ![image](https://github.com/user-attachments/assets/7a1cb615-c409-48ca-b3ce-f721523eb482)
