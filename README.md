@@ -9,13 +9,34 @@ A microservices-based pet store application designed to handle customer orders, 
 
 The application is a microservices-based system designed for a pet store, supporting both customer-facing and internal operations. Customers interact with the Store Front to browse products and place orders, which are handled by the Order Service and queued in Azure Service Bus for asynchronous processing. The Makeline Service retrieves and processes orders from the queue, updating the MongoDB order database. Employees use the Store Admin (also known as the Management service) interface to manage inventory and track orders via the Product Service and Makeline Service. The Product Service also integrates with the AI Service to generate product descriptions and images using Azure OpenAI services (GPT-4 and DALL-E). The architecture ensures modularity, scalability, and efficient communication, with Azure Service Bus replacing RabbitMQ for message queuing, while MongoDB provides persistent order storage. This design allows seamless coordination between frontend interfaces, backend services, and AI-powered functionalities.
 
-## Technologies Used 
-- Microsoft Azure
-- Docker
-- Azure Kubernetes Service
-- Python
-- RESTful APIs
-- MongoDB
+## Technologies Used
+
+### Cloud & Kubernetes
+- **Azure** (Azure Kubernetes Service - AKS, Azure Storage, Azure OpenAI, Azure Service Bus)
+- **Kubernetes** (Container orchestration for microservices)
+- **Azure Kubernetes Service (AKS)** (Managed Kubernetes service on Azure)
+- **Docker** (For containerizing microservices)
+- **Helm** (If used for deployment management)
+
+### Programming Languages
+- **Python** (For developing the REST API-based management microservice)
+
+### Microservices & Backend
+- **RESTful APIs** (For communication between microservices)
+- **MongoDB** (For order database storage)
+- **Azure Service Bus** (For message queuing)
+- **Docker** (For containerization of microservices)
+- **Kubernetes** (For orchestrating and deploying microservices)
+
+### AI Integration
+- **GPT-4** (Via Azure OpenAI for product descriptions)
+- **DALL-E** (Via Azure OpenAI for image generation)
+
+### CI/CD & Automation
+- **GitHub Actions** (For automating continuous integration and deployment workflows)
+
+### Version Control
+- **GitHub** (For managing code repositories and collaboration)
 
 ## Microservice Descriptions
 
