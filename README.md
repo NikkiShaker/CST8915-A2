@@ -1,4 +1,4 @@
-# Full-Stack Cloud-Native Project - Algonquin Pet Store Application
+# Full-Stack Cloud-Native Project (Algonquin Pet Store Application)
 
 A microservices-based pet store application designed to handle customer orders, inventory management, and product descriptions using AI services. The system is deployed on Azure using Kubernetes for scalability and reliability.
 <br>
@@ -17,7 +17,19 @@ The application is a microservices-based system designed for a pet store, suppor
 - RESTful APIs
 - MongoDB
 
-# Step-by-Step Instructions to Deploy the Application in a Kubernetes Cluster
+## Microservice Descriptions
+
+This application is designed with a microservices architecture, where each service has a specific responsibility.
+
+1. **Order Service**: Handles customer orders, receives requests from `store-front`, and processes them into the order queue.
+2. **Product Service**: Manages product information, including fetching and updating product details, which is used by both the `store-front` and `store-admin`.
+3. **Makeline Service**: Processes orders from the `order-queue` and updates the order database, handling the order preparation workflow.
+4. **Store-Admin Service**: Provides an interface for employees to manage products and monitor orders. It is linked to `product-service` and `makeline-service`. It's also known as the Management microservice.
+6. **AI Service**:
+   - The **Large Language Model (LLM)**: Used to generate product descriptions based on product data, integrated via API.
+   - The **Image Generation Model**: Uses DALL-E to generate product images for items in the inventory.
+
+## Step-by-Step Instructions to Deploy the Application in a Kubernetes Cluster
 
 1. Prerequisites
 Set up Kubernetes: Use a cloud provider (e.g., AKS, EKS, GKE) or local setup (e.g., Minikube, Docker Desktop).
@@ -28,11 +40,10 @@ Set up Kubernetes: Use a cloud provider (e.g., AKS, EKS, GKE) or local setup (e.
 2. Build and Push Docker Images
 For each microservice:
 
-Navigate to the directory with the Dockerfile.
-Build the image:
-
-       - docker build -t <dockerhub-username>/<service-name>:latest .
-       - docker push <dockerhub-username>/<service-name>:latest
+       - Navigate to the directory with the Dockerfile.
+       - Build the image:
+              - docker build -t <dockerhub-username>/<service-name>:latest .
+              - docker push <dockerhub-username>/<service-name>:latest
        
 3. Create Kubernetes Secrets
 Store sensitive information like API keys:
@@ -57,21 +68,21 @@ Ensure all pods are running:
        - Expected status: Running.
    
 7. Expose Frontend Services
-Expose store-front and store-admin:
 
-       - Use a LoadBalancer or NodePort in their service YAML files.
-       - Apply the YAML files:
-              - kubectl apply -f store-front-service.yaml
-              - kubectl apply -f store-admin-service.yaml
+       - Expose store-front and store-admin:
+              - Use a LoadBalancer or NodePort in their service YAML files.
+              - Apply the YAML files:
+                     - kubectl apply -f store-front-service.yaml
+                     - kubectl apply -f store-admin-service.yaml
          
-8. Verify Services
+9. Verify Services
        - kubectl get services
 Access the application via the EXTERNAL-IP for store-front and store-admin.
 
-9. Test the Application
+10. Test the Application
        - Open the external IP for store-front in a browser to test customer functionality.
        - Open the external IP for store-admin to manage inventory and orders.
-10. Debug Issues (If Needed)
+11. Debug Issues (If Needed)
        - Check logs:
               - kubectl logs <pod-name>
        - Describe pods:
@@ -116,4 +127,15 @@ Access the application via the EXTERNAL-IP for store-front and store-admin.
      ```bash
      kubectl logs <pod-name>
      ```
+
+## AI Service Description
+
+The AI service integrates two models to enhance product descriptions and images:
+
+1. **Large Language Model (LLM)**: 
+   - Uses Azure OpenAI's GPT-4 to generate creative and detailed product descriptions based on minimal input from the product service. This helps in creating more engaging product details for the store.
+   
+2. **Image Generation Model**:
+   - Integrates with **DALL-E** (also from Azure OpenAI) to automatically generate images for products that might not have pre-existing visuals, providing a more attractive and dynamic shopping experience for customers.
+
 
