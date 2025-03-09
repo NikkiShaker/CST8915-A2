@@ -159,4 +159,13 @@ The AI service integrates two models to enhance product descriptions and images:
 2. **Image Generation Model**:
    - Integrates with **DALL-E** (also from Azure OpenAI) to automatically generate images for products that might not have pre-existing visuals, providing a more attractive and dynamic shopping experience for customers.
 
+## Demo Video
 
+A silent video demo that navigates through the application and interactes with the features such as:
+- Browsing products in the customer-facing store-front.
+- Placing orders.
+- Managing inventory and orders in the store-admin interface.
+
+Watch the video to see how the application behaves and to familiarize yourself with the user flow.
+
+https://www.youtube.com/watch?v=mLzUEONSIXA
