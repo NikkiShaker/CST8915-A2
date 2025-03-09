@@ -168,4 +168,4 @@ A silent video demo that navigates through the application and interactes with t
 
 Watch the video to see how the application behaves and to familiarize yourself with the user flow.
 
-https://www.youtube.com/watch?v=mLzUEONSIXA
+https://youtu.be/mLzUEONSIXA?si=jMyvV4d2kZkJVTS-
